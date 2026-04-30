@@ -944,11 +944,20 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 // RSVP
 function submitRsvp() {
   const n = document.getElementById('rsvp-name').value.trim();
+  cofunction submitRsvp() {
+  const n = document.getElementById('rsvp-name').value.trim();
   const a = document.querySelector('input[name="attend"]:checked');
   if (!n) { document.getElementById('rsvp-name').style.borderColor='#c0392b'; return; }
   if (!a) return;
-  document.getElementById('rsvp-form').style.display = 'none';
-  document.getElementById('form-ok').style.display = 'block';
+
+  fetch('https://formspree.io/f/mbdwjael', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: n, attend: a.value })
+  }).then(() => {
+    document.getElementById('rsvp-form').style.display = 'none';
+    document.getElementById('form-ok').style.display = 'block';
+  });
 }
 
 // Music
