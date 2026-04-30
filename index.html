@@ -198,7 +198,9 @@ body.lang-kz span.kz { display: inline; }
 
 /* ── COUNTDOWN ── */
 .countdown-wrap {
-  background: var(--dark);
+  background: var(--warm);
+  border-top: 1px solid rgba(201,168,76,0.2);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
   padding: 52px 24px;
   text-align: center;
   position: relative;
@@ -207,11 +209,11 @@ body.lang-kz span.kz { display: inline; }
 .countdown-wrap::before {
   content: '';
   position: absolute; inset: 0;
-  background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(201,168,76,0.04) 40px, rgba(201,168,76,0.04) 41px);
+  background: repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(201,168,76,0.06) 40px, rgba(201,168,76,0.06) 41px);
 }
 .countdown-tag {
   font-size: 10px; letter-spacing: 5px;
-  text-transform: uppercase; color: var(--gold2);
+  text-transform: uppercase; color: var(--gold-dark);
   margin-bottom: 32px; display: block; position: relative;
 }
 .cd-grid {
@@ -223,11 +225,11 @@ body.lang-kz span.kz { display: inline; }
   font-family: 'Playfair Display', serif;
   font-size: clamp(48px, 13vw, 76px);
   font-weight: 400; line-height: 1;
-  color: var(--cream); display: block; min-width: 2ch;
+  color: var(--text); display: block; min-width: 2ch;
 }
 .cd-label {
   font-size: 9px; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--gold2);
+  text-transform: uppercase; color: var(--gold-dark);
   display: block; margin-top: 8px; opacity: 0.75;
 }
 .cd-sep {
@@ -304,37 +306,39 @@ body.lang-kz span.kz { display: inline; }
 
 /* ── DETAILS ── */
 .details-bg {
-  background: linear-gradient(160deg, #1e1710 0%, #2e1f12 100%);
+  background: var(--cream);
+  border-top: 1px solid rgba(201,168,76,0.2);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
   position: relative; overflow: hidden;
 }
 .details-bg::before {
   content: ''; position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse at 0% 100%, rgba(201,168,76,0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 100% 0%, rgba(201,168,76,0.08) 0%, transparent 50%);
+    radial-gradient(ellipse at 0% 100%, rgba(201,168,76,0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 0%, rgba(201,168,76,0.05) 0%, transparent 50%);
 }
-.details-bg .s-tag { color: var(--gold2); }
-.details-bg .s-title { color: var(--cream); }
+.details-bg .s-tag { color: var(--gold-dark); }
+.details-bg .s-title { color: var(--text); }
 .details-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
 .d-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(201,168,76,0.25); border-radius: 4px; padding: 22px 18px; text-align: left; position: relative;
+  background: white;
+  border: 1px solid rgba(201,168,76,0.3); border-radius: 4px; padding: 22px 18px; text-align: left; position: relative;
 }
 .d-card::after {
   content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
   background: linear-gradient(90deg, var(--gold), transparent);
 }
-.d-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold2); display: block; margin-bottom: 8px; opacity: 0.8; }
-.d-value { font-family: 'Playfair Display', serif; font-size: 17px; line-height: 1.4; color: var(--cream); }
+.d-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark); display: block; margin-bottom: 8px; opacity: 0.8; }
+.d-value { font-family: 'Playfair Display', serif; font-size: 17px; line-height: 1.4; color: var(--text); }
 .d-card.full { grid-column: 1 / -1; }
 .map-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
 .map-btn {
   padding: 12px 28px;
-  border: 1px solid rgba(201,168,76,0.5); color: var(--gold2); text-decoration: none;
+  border: 1px solid rgba(201,168,76,0.6); color: var(--gold-dark); text-decoration: none;
   font-size: 11px; letter-spacing: 3px; text-transform: uppercase; border-radius: 2px;
   transition: all 0.3s; font-weight: 500;
 }
-.map-btn:hover { background: var(--gold); color: var(--dark); border-color: var(--gold); }
+.map-btn:hover { background: var(--gold); color: white; border-color: var(--gold); }
 
 /* ── PROGRAM ── */
 .program-wrap { background: var(--cream); }
@@ -424,22 +428,23 @@ body.lang-kz span.kz { display: inline; }
 
 /* ── PHOTO / WISHES ── */
 .wishes-bg {
-  background: var(--dark);
+  background: var(--warm);
+  border-top: 1px solid rgba(201,168,76,0.2);
   position: relative; overflow: hidden;
 }
 .wishes-bg::before {
   content: ''; position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 30% 80%, rgba(201,168,76,0.05) 0%, transparent 40%);
+    radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.1) 0%, transparent 60%),
+    radial-gradient(ellipse at 30% 80%, rgba(201,168,76,0.07) 0%, transparent 40%);
 }
-.wishes-bg .s-tag { color: var(--gold2); }
-.wishes-bg .s-title { color: var(--cream); }
-.wishes-bg .s-text { color: rgba(253,250,244,0.6); }
+.wishes-bg .s-tag { color: var(--gold-dark); }
+.wishes-bg .s-title { color: var(--text); }
+.wishes-bg .s-text { color: var(--muted); }
 .camera-icon {
   width: 72px; height: 72px; margin: 0 auto 20px;
-  background: rgba(201,168,76,0.12);
-  border: 1px solid rgba(201,168,76,0.3);
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.4);
   border-radius: 50%; display: flex; align-items: center; justify-content: center;
   position: relative;
 }
@@ -457,16 +462,18 @@ body.lang-kz span.kz { display: inline; }
 
 /* ── GIFTS ── */
 .gifts-bg {
-  background: linear-gradient(135deg, #2e1f12 0%, #1e1710 100%);
+  background: var(--cream);
+  border-top: 1px solid rgba(201,168,76,0.2);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
   position: relative; overflow: hidden;
 }
 .gifts-bg::before {
   content: ''; position: absolute; inset: 0;
-  background-image: radial-gradient(circle at 30% 50%, rgba(201,168,76,0.06) 0%, transparent 60%);
+  background-image: radial-gradient(circle at 30% 50%, rgba(201,168,76,0.08) 0%, transparent 60%);
 }
-.gifts-bg .s-tag { color: var(--gold2); }
-.gifts-bg .s-title { color: var(--cream); }
-.gifts-bg .s-text { color: rgba(253,250,244,0.65); }
+.gifts-bg .s-tag { color: var(--gold-dark); }
+.gifts-bg .s-title { color: var(--text); }
+.gifts-bg .s-text { color: var(--muted); }
 
 /* ── RSVP ── */
 .rsvp-bg { background: white; }
@@ -519,10 +526,12 @@ body.lang-kz span.kz { display: inline; }
 
 /* ── FOOTER ── */
 footer {
-  background: var(--dark); color: rgba(253,250,244,0.35);
+  background: var(--warm);
+  border-top: 1px solid rgba(201,168,76,0.25);
+  color: var(--muted);
   text-align: center; padding: 36px 24px; font-size: 11px; letter-spacing: 2.5px;
 }
-footer strong { color: var(--gold2); display: block; margin-bottom: 10px; font-size: 13px; letter-spacing: 4px; }
+footer strong { color: var(--gold-dark); display: block; margin-bottom: 10px; font-size: 13px; letter-spacing: 4px; }
 
 /* ── ANIMATIONS ── */
 @keyframes fadeDown {
@@ -535,6 +544,21 @@ footer strong { color: var(--gold2); display: block; margin-bottom: 10px; font-s
 }
 .reveal { opacity:0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.on { opacity:1; transform: translateY(0); }
+
+/* ── MUSIC BTN ── */
+#music-btn {
+  position: fixed; bottom: 24px; right: 24px; z-index: 999;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: rgba(253,250,244,0.96);
+  border: 1px solid rgba(201,168,76,0.45);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.13);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+#music-btn:hover { transform: scale(1.1); box-shadow: 0 4px 24px rgba(201,168,76,0.3); }
+#music-btn svg { width: 20px; height: 20px; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 480px) {
@@ -668,10 +692,10 @@ footer strong { color: var(--gold2); display: block; margin-bottom: 10px; font-s
     <div class="kz">
       <span class="s-tag">Шақыру</span>
       <h2 class="s-title">Құрметті ағайын-туыс, достар!</h2>
-      <p class="s-text">Құрметті ағайын-туыс, құда-жекжат, дос-жаран, бауырлар, әріптестер!</p>
-      <p class="s-text">Сіздерді аяулы қызымыз Аружанның қыз ұзату тойына шақырамыз!</p>
-      <p class="s-text">Келіңіздер, ақ тілектеріңізді беріңіздер!</p>
+      <p class="s-text">Сіздерді аяулы қызымыз Аружанның ұзату тойына шақырамыз!</p>
+      <p class="s-text">Келіңіздер, ақ тілектеріңізді білдіріңіздер!</p>
       <p class="s-text">Назарларыңызды аударамыз: іс-шара форматы балалардың қатысуын қарастырмайды.</p>
+      <p class="s-text" style="font-weight:500; color:var(--gold-dark);">Қатысуынсыз өткізіледі.</p>
       <p class="s-sig">Құрметпен, Марат пен Салтанат</p>
     </div>
   </div>
@@ -725,8 +749,8 @@ footer strong { color: var(--gold2); display: block; margin-bottom: 10px; font-s
 <!-- ══ DETAILS ══ -->
 <div class="section-full details-bg reveal">
   <div class="section-inner" style="position:relative">
-    <div class="ru"><span class="s-tag">Детали</span><h2 class="s-title" style="color:var(--cream)">Место и время</h2></div>
-    <div class="kz"><span class="s-tag">Мәліметтер</span><h2 class="s-title" style="color:var(--cream)">Орны мен уақыты</h2></div>
+    <div class="ru"><span class="s-tag">Детали</span><h2 class="s-title">Место и время</h2></div>
+    <div class="kz"><span class="s-tag">Мәліметтер</span><h2 class="s-title">Орны мен уақыты</h2></div>
     <div class="details-cards">
       <div class="d-card">
         <span class="d-label"><span class="ru">Дата</span><span class="kz">Күні</span></span>
@@ -753,46 +777,18 @@ footer strong { color: var(--gold2); display: block; margin-bottom: 10px; font-s
 
 <!-- ══ DRESSCODE removed ══ -->
 
-<!-- ══ PHOTO WISHES ══ -->
-<div class="section-full wishes-bg reveal">
-  <div class="section-inner" style="position:relative;">
-    <div class="camera-icon">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <path d="M3 10C3 8.9 3.9 8 5 8H7.5L9.5 5H22.5L24.5 8H27C28.1 8 29 8.9 29 10V25C29 26.1 28.1 27 27 27H5C3.9 27 3 26.1 3 25V10Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
-        <circle cx="16" cy="17" r="5" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
-        <circle cx="16" cy="17" r="2.5" fill="#c9a84c" opacity="0.4"/>
-      </svg>
-    </div>
-    <div class="ru">
-      <span class="s-tag">Фото пожелания</span>
-      <h2 class="s-title" style="color:var(--cream)">Поделитесь моментом</h2>
-      <p class="s-text">Мы будем рады, если вы пришлёте нам ваши лучшие фото с торжества — это станет частью нашей памяти об этом дне.</p>
-    </div>
-    <div class="kz">
-      <span class="s-tag">Фото тілектер</span>
-      <h2 class="s-title" style="color:var(--cream)">Сәтті сурет жіберіңіз</h2>
-      <p class="s-text">Той кезінде түскен ең жақсы суреттеріңізді бізге жіберсеңіз — бұл сол күннің ескерткіші болып қалады.</p>
-    </div>
-    <!-- Замените номер на реальный WhatsApp номер -->
-    <a href="https://wa.me/77059049696" target="_blank" class="wa-btn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.556 4.118 1.526 5.847L.057 23.998l6.306-1.654C8.013 23.431 9.967 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.574-.5-5.065-1.373l-.363-.215-3.763.987.999-3.665-.236-.376C2.594 15.693 2 13.914 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      <span class="ru">Отправить фото</span><span class="kz">Сурет жіберу</span>
-    </a>
-  </div>
-</div>
-
 <!-- ══ GIFTS ══ -->
 <div class="section-full gifts-bg reveal">
   <div class="section-inner">
     <div class="ru">
       <span class="s-tag">Подарки</span>
       <h2 class="s-title">Ваше присутствие — лучший подарок</h2>
-      <p class="s-text" style="font-size:17px; line-height:1.9; color:rgba(253,250,244,0.8);">Если вы хотите выразить поздравление — будем рады вашему вниманию в виде <strong style="color:var(--gold2); font-weight:500;">конверта</strong>.</p>
+      <p class="s-text" style="font-size:17px; line-height:1.9;">Если вы хотите выразить поздравление — будем рады вашему вниманию в виде <strong style="color:var(--gold-dark); font-weight:500;">конверта</strong>.</p>
     </div>
     <div class="kz">
       <span class="s-tag">Сыйлықтар</span>
       <h2 class="s-title">Сіздің қатысуыңыз — ең жақсы сыйлық</h2>
-      <p class="s-text" style="font-size:17px; line-height:1.9; color:rgba(253,250,244,0.8);">Егер сыйлық дайындағыңыз келсе — <strong style="color:var(--gold2); font-weight:500;">хатпен</strong> қош келдіңіз.</p>
+      <p class="s-text" style="font-size:17px; line-height:1.9;">Егер сыйлық дайындағыңыз келсе — <strong style="color:var(--gold-dark); font-weight:500;">хатпен</strong> қош келдіңіз.</p>
     </div>
     <!-- envelope icon -->
     <div style="margin-top:28px; opacity:0.5;">
@@ -851,7 +847,7 @@ footer strong { color: var(--gold2); display: block; margin-bottom: 10px; font-s
       <div class="rsvp-divider"><span><span class="ru">или</span><span class="kz">немесе</span></span></div>
 
       <!-- Замените номер на реальный WhatsApp хозяев торжества -->
-      <a href="https://wa.me/77059049696?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D1%8F%20%D0%BF%D0%BE%D0%B4%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D0%B0%D1%8E%20%D1%81%D0%B2%D0%BE%D1%91%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%BD%D0%B0%20%D0%9A%D1%8B%D0%B7%20%D0%A3%D0%B7%D0%B0%D1%82%D1%83%20%D0%90%D1%80%D1%83%D0%B6%D0%B0%D0%BD%21"
+      <a href="https://wa.me/77001234567?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D1%8F%20%D0%BF%D0%BE%D0%B4%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D0%B0%D1%8E%20%D1%81%D0%B2%D0%BE%D1%91%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%BD%D0%B0%20%D0%9A%D1%8B%D0%B7%20%D0%A3%D0%B7%D0%B0%D1%82%D1%83%20%D0%90%D1%80%D1%83%D0%B6%D0%B0%D0%BD%21"
          target="_blank" class="wa-rsvp-btn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.556 4.118 1.526 5.847L.057 23.998l6.306-1.654C8.013 23.431 9.967 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.574-.5-5.065-1.373l-.363-.215-3.763.987.999-3.665-.236-.376C2.594 15.693 2 13.914 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
         <span class="ru">Написать в WhatsApp</span><span class="kz">WhatsApp арқылы жазу</span>
@@ -865,6 +861,34 @@ footer strong { color: var(--gold2); display: block; margin-bottom: 10px; font-s
   </div>
 </div>
 
+<!-- ══ PHOTO WISHES ══ -->
+<div class="section-full wishes-bg reveal">
+  <div class="section-inner" style="position:relative;">
+    <div class="camera-icon">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <path d="M3 10C3 8.9 3.9 8 5 8H7.5L9.5 5H22.5L24.5 8H27C28.1 8 29 8.9 29 10V25C29 26.1 28.1 27 27 27H5C3.9 27 3 26.1 3 25V10Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+        <circle cx="16" cy="17" r="5" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+        <circle cx="16" cy="17" r="2.5" fill="#c9a84c" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="ru">
+      <span class="s-tag">Фото пожелания</span>
+      <h2 class="s-title">Поделитесь моментом</h2>
+      <p class="s-text">Мы будем рады, если вы пришлёте нам ваши лучшие фото с торжества — это станет частью нашей памяти об этом дне.</p>
+    </div>
+    <div class="kz">
+      <span class="s-tag">Фото тілектер</span>
+      <h2 class="s-title">Сәтті сурет жіберіңіз</h2>
+      <p class="s-text">Той кезінде түскен ең жақсы суреттеріңізді бізге жіберсеңіз — бұл сол күннің ескерткіші болып қалады.</p>
+    </div>
+    <!-- Замените номер на реальный WhatsApp номер -->
+    <a href="https://wa.me/77001234567" target="_blank" class="wa-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.556 4.118 1.526 5.847L.057 23.998l6.306-1.654C8.013 23.431 9.967 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.574-.5-5.065-1.373l-.363-.215-3.763.987.999-3.665-.236-.376C2.594 15.693 2 13.914 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      <span class="ru">Отправить фото</span><span class="kz">Сурет жіберу</span>
+    </a>
+  </div>
+</div>
+
 <!-- ══ FOOTER ══ -->
 <footer>
   <strong>АРУЖАН — ҚЫЗ ҰЗАТУ</strong>
@@ -872,26 +896,40 @@ footer strong { color: var(--gold2); display: block; margin-bottom: 10px; font-s
   <span class="kz">03 шілде 2026 · Heaven Hall · Алматы</span>
 </footer>
 
+<!-- ══ MUSIC ══ -->
+<!-- Замени music.mp3 на название своего файла, загруженного в репозиторий -->
+<audio id="bg-music" src="music.mp3" loop preload="auto"></audio>
+
+<button id="music-btn" onclick="toggleMusic(event)" title="Музыка">
+  <!-- Note icon (default state) -->
+  <svg id="icon-note" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 18V5l12-2v13" stroke="#8a6a1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="6" cy="18" r="3" stroke="#8a6a1f" stroke-width="1.5"/>
+    <circle cx="18" cy="16" r="3" stroke="#8a6a1f" stroke-width="1.5"/>
+  </svg>
+  <!-- Mute icon (playing state, hidden by default) -->
+  <svg id="icon-mute" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <path d="M9 18V5l12-2v13" stroke="#8a6a1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="6" cy="18" r="3" stroke="#8a6a1f" stroke-width="1.5"/>
+    <circle cx="18" cy="16" r="3" stroke="#8a6a1f" stroke-width="1.5"/>
+    <line x1="3" y1="3" x2="21" y2="21" stroke="#c0392b" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+</button>
+
 <script>
 function setLang(l) {
   document.body.className = 'lang-' + l;
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
   document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');
-  // Fix calendar grids
   document.getElementById('cal-grid-ru').style.display = l === 'ru' ? 'grid' : 'none';
   document.getElementById('cal-grid-kz').style.display = l === 'kz' ? 'grid' : 'none';
 }
-
-// Init calendar on load
 setLang('ru');
 
 // Countdown
 function tick() {
   const diff = new Date('2026-07-03T17:00:00+06:00') - new Date();
-  if (diff <= 0) {
-    ['cd-d','cd-h','cd-m','cd-s'].forEach(i => document.getElementById(i).textContent='00');
-    return;
-  }
+  if (diff <= 0) { ['cd-d','cd-h','cd-m','cd-s'].forEach(i=>document.getElementById(i).textContent='00'); return; }
   document.getElementById('cd-d').textContent = String(Math.floor(diff/86400000)).padStart(2,'0');
   document.getElementById('cd-h').textContent = String(Math.floor(diff%86400000/3600000)).padStart(2,'0');
   document.getElementById('cd-m').textContent = String(Math.floor(diff%3600000/60000)).padStart(2,'0');
@@ -900,9 +938,7 @@ function tick() {
 tick(); setInterval(tick, 1000);
 
 // Scroll reveal
-const obs = new IntersectionObserver(es => es.forEach(e => {
-  if(e.isIntersecting) e.target.classList.add('on');
-}), {threshold:0.08});
+const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); }), {threshold:0.08});
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
 // RSVP
@@ -913,6 +949,38 @@ function submitRsvp() {
   if (!a) return;
   document.getElementById('rsvp-form').style.display = 'none';
   document.getElementById('form-ok').style.display = 'block';
+}
+
+// Music
+let playing = false;
+const music = document.getElementById('bg-music');
+music.volume = 0.3;
+
+// Start on first user interaction anywhere on page
+document.addEventListener('click', function tryAutoplay() {
+  if (!playing) {
+    music.play().then(() => {
+      playing = true;
+      document.getElementById('icon-note').style.display = 'block';
+      document.getElementById('icon-mute').style.display = 'none';
+    }).catch(() => {});
+  }
+}, { once: true });
+
+function toggleMusic(e) {
+  e.stopPropagation();
+  if (playing) {
+    music.pause();
+    playing = false;
+    document.getElementById('icon-note').style.display = 'block';
+    document.getElementById('icon-mute').style.display = 'none';
+  } else {
+    music.play().then(() => {
+      playing = true;
+      document.getElementById('icon-note').style.display = 'none';
+      document.getElementById('icon-mute').style.display = 'block';
+    });
+  }
 }
 </script>
 </body>
