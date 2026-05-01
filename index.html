@@ -569,12 +569,12 @@ footer strong { color: var(--gold-dark); display: block; margin-bottom: 10px; fo
 }
 </style>
 </head>
-<body class="lang-ru">
+<body class="lang-kz">
 
 <!-- LANG -->
 <div class="lang-bar">
-  <button class="lang-btn active" onclick="setLang('ru')">РУС</button>
-  <button class="lang-btn" onclick="setLang('kz')">ҚАЗ</button>
+  <button class="lang-btn" onclick="setLang('ru')">РУС</button>
+  <button class="lang-btn active" onclick="setLang('kz')">ҚАЗ</button>
 </div>
 
 <!-- ══ HERO ══ -->
@@ -924,7 +924,7 @@ function setLang(l) {
   document.getElementById('cal-grid-ru').style.display = l === 'ru' ? 'grid' : 'none';
   document.getElementById('cal-grid-kz').style.display = l === 'kz' ? 'grid' : 'none';
 }
-setLang('ru');
+setLang('kz');
 
 // Countdown
 function tick() {
