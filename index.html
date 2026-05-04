@@ -228,7 +228,7 @@ body.lang-kz span.kz { display: inline; }
   color: var(--text); display: block; min-width: 2ch;
 }
 .cd-label {
-  font-size: 9px; letter-spacing: 3px;
+  font-size: 11px; letter-spacing: 3px;
   text-transform: uppercase; color: var(--gold-dark);
   display: block; margin-top: 8px; opacity: 0.75;
 }
@@ -243,17 +243,17 @@ body.lang-kz span.kz { display: inline; }
 .section-full { padding: 72px 24px; text-align: center; }
 .section-inner { max-width: 640px; margin: 0 auto; }
 .s-tag {
-  font-size: 10px; letter-spacing: 5px;
+  font-size: 12px; letter-spacing: 5px;
   text-transform: uppercase; color: var(--gold-dark);
   display: block; margin-bottom: 18px; font-weight: 500;
 }
 .s-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(26px, 7vw, 36px);
+  font-size: clamp(30px, 8vw, 42px);
   font-weight: 400; margin-bottom: 20px; line-height: 1.2;
 }
 .s-text {
-  font-size: 14px; line-height: 2; color: var(--muted); margin-bottom: 14px;
+  font-size: 17px; line-height: 2.1; color: var(--muted); margin-bottom: 16px;
 }
 .s-sig {
   font-family: 'Playfair Display', serif;
@@ -329,7 +329,7 @@ body.lang-kz span.kz { display: inline; }
   background: linear-gradient(90deg, var(--gold), transparent);
 }
 .d-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark); display: block; margin-bottom: 8px; opacity: 0.8; }
-.d-value { font-family: 'Playfair Display', serif; font-size: 17px; line-height: 1.4; color: var(--text); }
+.d-value { font-family: 'Playfair Display', serif; font-size: 19px; line-height: 1.5; color: var(--text); }
 .d-card.full { grid-column: 1 / -1; }
 .map-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
 .map-btn {
@@ -361,7 +361,7 @@ body.lang-kz span.kz { display: inline; }
   width: 12px; height: 12px; background: var(--gold);
   border-radius: 50%; flex-shrink: 0; box-shadow: 0 0 0 4px rgba(201,168,76,0.2);
 }
-.tl-desc { flex: 1; font-size: 13px; line-height: 1.6; color: var(--muted); }
+.tl-desc { flex: 1; font-size: 16px; line-height: 1.7; color: var(--muted); }
 .tl-item:nth-child(odd) .tl-desc { text-align: right; }
 
 /* ── DRESSCODE ── */
@@ -482,7 +482,7 @@ body.lang-kz span.kz { display: inline; }
 .f-label { display: block; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 8px; font-weight: 500; }
 .f-input {
   width: 100%; padding: 14px 16px; border: 1px solid #e8ddc8;
-  background: var(--cream); font-family: 'Raleway', sans-serif; font-size: 14px; color: var(--text);
+  background: var(--cream); font-family: 'Raleway', sans-serif; font-size: 16px; color: var(--text);
   outline: none; transition: border-color 0.3s; border-radius: 2px;
 }
 .f-input:focus { border-color: var(--gold); }
@@ -490,7 +490,7 @@ body.lang-kz span.kz { display: inline; }
 .r-label {
   display: flex; align-items: center; gap: 14px;
   padding: 13px 16px; border: 1px solid #e8ddc8; border-radius: 2px;
-  cursor: pointer; font-size: 13px; color: var(--text); transition: all 0.2s;
+  cursor: pointer; font-size: 16px; color: var(--text); transition: all 0.2s;
 }
 .r-label:has(input:checked) { border-color: var(--gold); background: rgba(201,168,76,0.06); }
 .r-label input { accent-color: var(--gold-dark); }
@@ -573,8 +573,8 @@ footer strong { color: var(--gold-dark); display: block; margin-bottom: 10px; fo
 
 <!-- LANG -->
 <div class="lang-bar">
-  <button class="lang-btn" onclick="setLang('ru')">РУС</button>
   <button class="lang-btn active" onclick="setLang('kz')">ҚАЗ</button>
+  <button class="lang-btn" onclick="setLang('ru')">РУС</button>
 </div>
 
 <!-- ══ HERO ══ -->
@@ -691,12 +691,10 @@ footer strong { color: var(--gold-dark); display: block; margin-bottom: 10px; fo
     </div>
     <div class="kz">
       <span class="s-tag">Шақыру</span>
-      <h2 class="s-title">Құрметті ағайын-туыс, достар!</h2>
-      <p class="s-text">Сіздерді аяулы қызымыз Аружанның ұзату тойына шақырамыз!</p>
-      <p class="s-text">Келіңіздер, ақ тілектеріңізді білдіріңіздер!</p>
-      <p class="s-text">Назарларыңызды аударамыз: іс-шара форматы балалардың қатысуын қарастырмайды.</p>
+      <h2 class="s-title">Құрметті ағайын-туыс, құда-жекжат, бауырлар, достар және әріптестер!</h2>
+      <p class="s-text">Сіздерді аяулы қызымыз Аружанның ұзату тойының қадірлі қонағы болуға шақырамыз. Ақ тілектеріңізді арқалай келіп, қуанышымызға ортақ болыңыздар!</p>
       <p class="s-text" style="font-weight:500; color:var(--gold-dark);">Қатысуынсыз өткізіледі.</p>
-      <p class="s-sig">Құрметпен, Марат пен Салтанат</p>
+      <p class="s-sig">Құрметпен, Той иелері: Марат – Салтанат</p>
     </div>
   </div>
 </div>
@@ -788,7 +786,7 @@ footer strong { color: var(--gold-dark); display: block; margin-bottom: 10px; fo
     <div class="kz">
       <span class="s-tag">Сыйлықтар</span>
       <h2 class="s-title">Сіздің қатысуыңыз — ең жақсы сыйлық</h2>
-      <p class="s-text" style="font-size:17px; line-height:1.9;">Егер сыйлық дайындағыңыз келсе — <strong style="color:var(--gold-dark); font-weight:500;">хатпен</strong> қош келдіңіз.</p>
+      <p class="s-text">Сіздердің қатысуларыңыз – біз үшін ең үлкен сыйлық. Ақ тілектеріңізді сыйлықпен білдіргіңіз келсе, ілтипаттарыңызды <strong style="color:var(--gold-dark); font-weight:500;">конверт</strong> түрінде қабылдауға қуаныштымыз. 😉</p>
     </div>
     <!-- envelope icon -->
     <div style="margin-top:28px; opacity:0.5;">
@@ -797,6 +795,19 @@ footer strong { color: var(--gold-dark); display: block; margin-bottom: 10px; fo
         <path d="M4 12 L24 26 L44 12" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
       </svg>
     </div>
+  </div>
+</div>
+
+<!-- ══ ЕСКЕРТУ ══ -->
+<div class="section-full reveal" style="background:var(--cream); border-top:1px solid rgba(201,168,76,0.2); border-bottom:1px solid rgba(201,168,76,0.2);">
+  <div class="section-inner" style="text-align:center;">
+    <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.4);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M12 3C6.48 3 2 7.48 2 12s4.48 9 10 9 10-4.48 10-9S17.52 3 12 3z" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+    <span class="s-tag kz">Ескерту</span>
+    <span class="s-tag ru">Внимание</span>
+    <p class="s-text kz" style="font-size:18px; font-weight:600; color:var(--text); line-height:1.8; margin-top:12px;">Назар аударыңыз: Той форматында балалардың қатысуы қарастырылмаған!</p>
+    <p class="s-text ru" style="font-size:18px; font-weight:600; color:var(--text); line-height:1.8; margin-top:12px;">Обращаем внимание: формат торжества не предусматривает присутствие детей!</p>
   </div>
 </div>
 
@@ -811,7 +822,7 @@ footer strong { color: var(--gold-dark); display: block; margin-bottom: 10px; fo
     <div class="kz">
       <span class="s-tag">Растау</span>
       <h2 class="s-title">Келесіз бе?</h2>
-      <p class="s-text">Қатысуыңызды растауыңызды өтінеміз — бұл әр қонақ туралы қамқорлық жасауымызға көмектеседі.</p>
+      <p class="s-text">Әрбір қонағымыздың барынша жағдайын жасау мақсатында, төмендегі перделерді белгілеу арқылы бізге көмек берулеріңізді сұраймыз:</p>
     </div>
 
     <div id="rsvp-form" class="rsvp-form-wrap">
@@ -829,10 +840,6 @@ footer strong { color: var(--gold-dark); display: block; margin-bottom: 10px; fo
           <label class="r-label">
             <input type="radio" name="attend" value="yes_spouse">
             <span class="ru">Да, приду с супругом / супругой</span><span class="kz">Иә, жұбаймен келемін</span>
-          </label>
-          <label class="r-label">
-            <input type="radio" name="attend" value="maybe">
-            <span class="ru">Уточню позже</span><span class="kz">Кейінірек хабарламын</span>
           </label>
           <label class="r-label">
             <input type="radio" name="attend" value="no">
@@ -858,34 +865,6 @@ footer strong { color: var(--gold-dark); display: block; margin-bottom: 10px; fo
       <div class="ru">Спасибо!<br>Ждём вас с радостью 🤍</div>
       <div class="kz">Рахмет!<br>Сізді қуанышпен күтеміз 🤍</div>
     </div>
-  </div>
-</div>
-
-<!-- ══ PHOTO WISHES ══ -->
-<div class="section-full wishes-bg reveal">
-  <div class="section-inner" style="position:relative;">
-    <div class="camera-icon">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <path d="M3 10C3 8.9 3.9 8 5 8H7.5L9.5 5H22.5L24.5 8H27C28.1 8 29 8.9 29 10V25C29 26.1 28.1 27 27 27H5C3.9 27 3 26.1 3 25V10Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
-        <circle cx="16" cy="17" r="5" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
-        <circle cx="16" cy="17" r="2.5" fill="#c9a84c" opacity="0.4"/>
-      </svg>
-    </div>
-    <div class="ru">
-      <span class="s-tag">Фото пожелания</span>
-      <h2 class="s-title">Поделитесь моментом</h2>
-      <p class="s-text">Мы будем рады, если вы пришлёте нам ваши лучшие фото с торжества — это станет частью нашей памяти об этом дне.</p>
-    </div>
-    <div class="kz">
-      <span class="s-tag">Фото тілектер</span>
-      <h2 class="s-title">Сәтті сурет жіберіңіз</h2>
-      <p class="s-text">Той кезінде түскен ең жақсы суреттеріңізді бізге жіберсеңіз — бұл сол күннің ескерткіші болып қалады.</p>
-    </div>
-    <!-- Замените номер на реальный WhatsApp номер -->
-    <a href="https://wa.me/77001234567" target="_blank" class="wa-btn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.556 4.118 1.526 5.847L.057 23.998l6.306-1.654C8.013 23.431 9.967 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.574-.5-5.065-1.373l-.363-.215-3.763.987.999-3.665-.236-.376C2.594 15.693 2 13.914 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      <span class="ru">Отправить фото</span><span class="kz">Сурет жіберу</span>
-    </a>
   </div>
 </div>
 
